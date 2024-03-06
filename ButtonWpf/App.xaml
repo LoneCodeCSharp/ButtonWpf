@@ -1,0 +1,261 @@
+﻿<Application x:Class="ButtonWpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ButtonWpf"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ImageBrush x:Key="inst_def"
+            ImageSource="/Img/inst1_icoG.png"
+            Stretch="Fill" />
+
+        <ImageBrush x:Key="inst_ac"
+         ImageSource="/Img/inst1_ico.png"
+            Stretch="Fill" />
+        
+        <ImageBrush  x:Key="face_def"
+     ImageSource="/Img/face_iconG.png"
+     Stretch="Uniform" />
+
+        <ImageBrush x:Key="face_ac"
+            ImageSource="/Img/face_icon.png"
+            Stretch="Uniform" />
+        <ImageBrush x:Key="tg_def"
+            ImageSource="/Img/tg_iconG.png"
+            Stretch="Fill" />
+
+        <ImageBrush x:Key="tg_ac"
+  ImageSource="/Img/tg_icon.png"
+     Stretch="UniformToFill" />
+        <ImageBrush x:Key="yt_def"
+     ImageSource="/Img/yt_icon1.png"
+     Stretch="Fill" />
+
+        <ImageBrush x:Key="yt_ac"
+  ImageSource="/Img/yt_icon.png"
+     Stretch="Uniform" />
+
+
+        <Style x:Key="ButtonUp" TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=btn1, Path=IsMouseOver}" Value="False">
+                    <Setter Property="Margin" Value="0 0 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=btn1, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=border1, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="ButtonUp1" TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=btn2, Path=IsMouseOver}" Value="False">
+                    <Setter Property="Margin" Value="0 0 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=btn2, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=border2, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        
+        
+        
+        <Style x:Key="ButtonUp2" TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=btn3, Path=IsMouseOver}" Value="False">
+                    <Setter Property="Margin" Value="0 0 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=btn3, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=border3, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ButtonUp3" TargetType="Border">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=btn4, Path=IsMouseOver}" Value="False">
+                    <Setter Property="Margin" Value="0 0 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=btn4, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=border4, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Margin" Value="0 -115 0 0"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="InstBtnStyle"
+        TargetType="{x:Type Button}">
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border"
+                         BorderThickness="0"
+                         Background="{StaticResource inst_def}" />
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                              Value="True">
+
+                                <Setter Property="Background"
+                                 TargetName="border"
+                                 Value="{StaticResource inst_ac}" />
+
+                            </Trigger>
+
+                            <Trigger Property="IsPressed"
+                              Value="True">
+
+                                <Setter Property="Background"
+                                 TargetName="border"
+                                 Value="{StaticResource inst_ac}" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+        
+        <Style x:Key="FaceBtnStyle"
+TargetType="{x:Type Button}">
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border"
+                 BorderThickness="0"
+                 Background="{StaticResource face_def}" />
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         TargetName="border"
+                         Value="{StaticResource face_ac}" />
+
+                            </Trigger>
+
+                            <Trigger Property="IsPressed"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         TargetName="border"
+                         Value="{StaticResource face_ac}" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+        <Style x:Key="TgBtnStyle"
+TargetType="{x:Type Button}">
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border"
+                 BorderThickness="0"
+                 Background="{StaticResource tg_def}" />
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         TargetName="border"
+                         Value="{StaticResource tg_ac}" />
+
+                            </Trigger>
+
+                            <Trigger Property="IsPressed"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         TargetName="border"
+                         Value="{StaticResource tg_ac}" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+        <Style x:Key="YtBtnStyle"
+TargetType="{x:Type Button}">
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border x:Name="border"
+                 BorderThickness="0"
+                 Background="{StaticResource yt_def}" />
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         TargetName="border"
+                         Value="{StaticResource yt_ac}" />
+
+                            </Trigger>
+
+                            <Trigger Property="IsPressed"
+                      Value="True">
+
+                                <Setter Property="Background"
+                         TargetName="border"
+                         Value="{StaticResource yt_ac}" />
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+    </Application.Resources>
+</Application>
